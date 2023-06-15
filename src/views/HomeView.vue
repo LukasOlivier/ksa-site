@@ -1,6 +1,6 @@
 <template>
   <div class="notLoggedIn" id="home" @click="localStorageService.removeToken">
-    <a id="demo" @click="" href="/announcements">Demo</a>
+    <a id="demo" @click="visitDemo">Demo</a>
     <h2>KSA Izegem - Administratie</h2>
     <div id="actions">
       <input
@@ -32,6 +32,9 @@ export default {
     },
     register() {
       this.$router.push("/register");
+    },
+    visitDemo() {
+      this.$router.push("/annoubcements");
     },
   },
   data() {

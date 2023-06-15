@@ -5,7 +5,7 @@ import path from "node:path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/ksa-site/",
   plugins: [vue()],
   resolve: {
     alias: {

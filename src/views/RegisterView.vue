@@ -1,6 +1,6 @@
 <template>
   <div class="notLoggedIn" id="registerPage">
-    <a id="back" href="/">Home</a>
+    <a id="back" @click="goToHome">Home</a>
 
     <h2>Registreren</h2>
     <form action="" @submit.prevent="register">
@@ -123,6 +123,9 @@ export default {
     };
   },
   methods: {
+    goToHome() {
+      this.$router.push("/");
+    },
     register() {
       if (this.formData.password != this.passwordRepeat) {
         alert("Wachtwoorden komen niet overeen");
